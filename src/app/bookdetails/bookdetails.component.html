@@ -1,0 +1,24 @@
+
+<div class="table-responsive">
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>Userid</th>
+              <th>UserName</th>
+              <th>Contact</th>
+              <th>Email</th>
+              <th>Check-in Date</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let room of room">
+              <td>{{room.user.userid}}</td>
+              <td>{{room.user.userName}}</td>
+              <td>{{room.user.contact}}</td>
+              <td>{{room.user.email}}</td>
+              <td>{{room.bookdate}}</td>
+          </tr>         
+      </tbody>
+  </table>
+  <button type="button" class="btn btn-primary" style="margin-left: 45%" (click)="back()">Back</button>
+</div>

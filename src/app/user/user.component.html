@@ -1,0 +1,55 @@
+  
+    
+
+<br><br>
+<div style="height: 60px;width: 100%;position: relative;margin: 0px;top: 0px">
+  <form #myForm="ngForm" (ngSubmit)="search(myForm)" role="form" >
+  <table class="div3" border="0.4" style="position: absolute;left: 35%;">
+      <tr>
+      <td><input type="text" ngModel name="city" placeholder="Search Room By City" style="height:35px;"></td>
+      <td><input type="submit" value="Search" style="height: 35px;width: 200px;background-color:royalblue"></td>
+    </tr>
+  </table>
+  </form>
+  </div>
+  <br>
+<div class="table-responsive" >
+    <table class="table table-striped" *ngIf="!roomlist">
+        <thead>
+            <tr>
+                <th>RoomType</th>
+                <th>Rent</th>
+                <th>City</th>
+                <th>Area</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Facilities</th>
+                <th>Onwer</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let room of room">
+                
+                <td>{{room.roomtype}}</td>
+                <td>{{room.rent}}</td>
+                <td>{{room.city}}</td>
+                <td>{{room.area}}</td>
+                <td>{{room.resiadd}}</td>                
+                <td>{{room.pincode}}</td>
+                <td>{{room.facilities}}</td>
+                <td>{{room.userid.userName}}</td>
+                <td>{{room.userid.contact}}</td>
+                <td>{{room.userid.email}}</td>
+                <td><img class="restaurants" style="width:150px;height:150px;" src="data:image/gif;base64,{{room.roomimage}}" routerLink="/fooditems"></td>
+                <td>
+                <button type="button" (click)="book(room.roomid,room.rent)" class="btn btn-primary">Book</button>
+                </td>
+        </tbody>
+    </table>
+</div>
+
+  
+ 
+   

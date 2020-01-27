@@ -1,0 +1,117 @@
+<br>
+<div><img src="/assets/images/logo5.jpg" style="position: absolute;top: 8px;left:10px;height:100px;width:100px;border-radius: 60px">
+    <span id="prifix">Live</span><span id="suffx">Ago</span>
+</div>
+
+<br><br>
+<!-- <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color:midnightblue;">
+       <ul class="nav navbar-nav">
+        <li >
+            <a routerLink="">Home</a>
+        </li>
+        <li>
+            <a routerLink="/aboutus">AboutUs</a>
+        </li>
+        <li>
+            <a routerLink="/contactus">Contact Us</a>
+        </li>
+        <li *ngIf="!isLogin">
+            <a routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="isLogin">
+                <a (click)="logout()">Logout</a>
+        </li>
+        <li>
+            <a routerLink="/signup">Register</a>
+        </li>
+     </ul>
+   
+</nav>
+<router-outlet></router-outlet> -->
+<!-- <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color:midnightblue;">
+    <ul>
+
+        <li>
+            <a routerLink="">Home</a>
+        </li>
+        <li>
+            <a routerLink="/aboutus">AboutUs</a>
+        </li>
+        <li>
+            <a routerLink="/contactus">Contact Us</a>
+        </li>
+        <li *ngIf="!isLogin" class="active">
+            <a routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="isLogin">
+            <a (click)="logout()">Logout</a>
+        </li>
+        <li>
+            <a routerLink="/signup">Register</a>
+        </li>
+        <li *ngIf="isLogin">
+            <a routerLink="/updateuser"  style="color:cadetblue">Profile</a>
+        </li>
+        <ng-container *ngIf="isLogin">
+        <li >
+                <a *ngIf="!isOwner()" routerLink="/user">SearchRoom</a>
+                
+        </li>
+        <li >
+                <a *ngIf="isOwner()" routerLink="/owner">Add Room</a>
+                
+        </li>
+    </ng-container>
+       
+        
+     
+    </ul>
+    <router-outlet></router-outlet>
+    
+</nav> -->
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: black;opacity: 0.6;font-weight: bold;font-size:15px;">
+       <ul class="nav navbar-nav">
+            <li>
+                <a routerLink="">Home</a>
+            </li>
+            <li>
+                <a routerLink="/aboutus">AboutUs</a>
+            </li>
+            <li>
+                <a routerLink="/contactus">Contact Us</a>
+            </li>
+            <li *ngIf="!isLogin">
+                <a routerLink="/login">Login</a>
+            </li>
+            <li *ngIf="isLogin">
+                <a (click)="logout()">Logout</a>
+            </li>
+            <!-- <li>
+                <a routerLink="/signup">Register</a>
+            </li> -->
+            <li *ngIf="isLogin">
+                <a routerLink="/updateuser">Profile</a>
+            </li>
+            <ng-container *ngIf="isLogin">
+            <li >
+                    <a *ngIf="!isOwner()" routerLink="/user">SearchRoom</a>
+                    
+            </li>
+            <li >
+                    <a *ngIf="isOwner()" routerLink="/owner">Add Room</a>
+                    
+            </li>
+        </ng-container>
+    </ul>
+   </nav>
+<router-outlet></router-outlet>
+<br><br>
+<br>
+<br>
+<div class="footer">
+    <p>Copyright &copy; 2020 LiveAgo. All Rights Reserved</p>
+    <a  class="fa fa-facebook"></a>
+    <a class="fa fa-twitter"></a>
+    <a  class="fa fa-google"></a>
+</div>

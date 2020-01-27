@@ -1,0 +1,15 @@
+<h1 style="text-align: center;">Verify your email address!!</h1>
+<br>
+<br>
+<br>
+<form #otpForm="ngForm" (ngSubmit)="confirmOtp(otpForm)" style="width: 40% ; margin: auto; ">
+
+  <div class="form-group">
+    <h4 style="color:darkgrey; text-align: center; ">Enter the verification code that we sent on your email addess </h4>
+     <input type="number" ngModel name="otp"  class="form-control" id="otp" placeholder="Enter otp">
+   </div>
+
+  
+
+  <button type="submit" class="btn btn-success"  name="submit" style="margin-left: 40%;">Verify OTP</button>
+</form>

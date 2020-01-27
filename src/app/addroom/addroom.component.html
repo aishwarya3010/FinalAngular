@@ -1,0 +1,54 @@
+
+<br><br>
+<h1 style="text-align: center">Add Room</h1>
+<form #myForm="ngForm" (ngSubmit)="addroom(myForm)" role="form" style="width:40%;margin: auto" >
+  <div class="form-group">
+    RoomType
+    <select ngModel name="roomtype">
+      <option value="PG" selected>PG</option>
+      <option value="ONEBHK">ONEBHK</option>
+      <option value="TWOBHK">TWOBHK</option>
+      <option value="BUNGALOW">BUNGALOW</option>
+      <option value="ROWHOUSE">ROWHOUSE</option>
+    </select>
+    <!-- <input type="text" name="roomtype" ngModel class="form-control" id="" placeholder="Input Name"> -->
+  </div>
+  <div class="form-group">
+    City
+    <input type="text" name="city" ngModel class="form-control" id="" placeholder="Input Email">
+  </div>
+  <div class="form-group">
+    Pincode
+    <input type="number" name="pincode" ngModel class="form-control" id="" placeholder="Input Contact">
+  </div>
+  <div class="form-group">
+    Area
+    <input type="text" name="area" ngModel class="form-control" id="" placeholder="Input password">
+  </div>
+  <div class="form-group" style="text-align: left">
+    <div> Residential Address</div>   
+    <textarea name="resiadd" id="" ngModel cols="60" rows="4"></textarea>
+  </div>
+  <div class="form-group">
+    Rent
+    <input type="number" name="rent" ngModel class="form-control" id="" placeholder="Input password">
+  </div>
+  <div class="form-group">
+    Facilities
+    <input type="text" name="facilities" ngModel class="form-control" id="" placeholder="Input password">
+  </div>
+  <div class="form-group">
+    Status (is the room available)
+    <!-- <input type="text" name="status" ngModel class="form-control" id="" placeholder="Input password"> -->
+    <select ngModel name="status">
+      <option value="AVAILABLE" selected>AVAILABLE</option>
+      <option value="NOTAVAILABLE">NOT AVAILABLE</option>
+    </select>
+  </div>
+  <div class="form-group">
+    Roomimage
+    <input (change)="onSelect($event)" accept="image/*" class="form-control" style="padding-left: 20px;padding-top: 8px;" type="file" id="restimg" name=roomimage >
+  </div>
+  <button type="submit" class="btn btn-success" style="margin-left: 35%">Add Room</button>&nbsp;&nbsp;&nbsp;
+  <button type="button" class="btn btn-primary" (click)="back()" >Back</button>
+</form>
